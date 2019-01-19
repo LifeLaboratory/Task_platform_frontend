@@ -1,3 +1,4 @@
+//EventList
 import React, {Component} from "react"
 
 const divStyle = {
@@ -5,19 +6,22 @@ const divStyle = {
     height: '300px'
 };
 
-export class EventsComponent extends Component {
+export default class EventsComponent extends Component {
   constructor(props) {
     super(props)
+    
+    this.eventList = 'test'
+    
   }
-
-  
 
   render() {
 
     return (
       <div style={divStyle}>
-
-        Here will be events
+      <ul>
+        <li>eventsList</li>
+      </ul>
+      
 
       </div>
     )

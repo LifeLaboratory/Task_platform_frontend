@@ -61,11 +61,6 @@ export default class EventsListComponent extends Component {
       <form onSubmit={this.handleSubmit}>
       
         <label>
-        Name:
-        <input type="text" id="name" value={this.state.name} onChange={this.handleChangeName}></input>
-        </label>
-        <br/>
-        <label>
           Login:
         <input type="text" id="login" value={this.state.login} onChange={this.handleChangeLogin}></input>
         </label>
@@ -73,12 +68,7 @@ export default class EventsListComponent extends Component {
         <label>
           Password:
         <input type="password" id="password" value={this.state.password} onChange={this.handleChangePassword}></input>
-        </label>
-        <br/>
-        <label>
-          E-mail:
-        <input type="text" id="email" value={this.state.email} onChange={this.handleChangeEmail}></input>
-        </label>
+        </label><br/>
         <input type="submit" value="Submit"/>
       </form>
     </div>
