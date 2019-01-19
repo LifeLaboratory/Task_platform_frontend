@@ -13,19 +13,12 @@ class Event {
     -description: string
     -startDate: timestamp
     -endDate: timestamp
-    -createdAt: timestamp
-
-
-/'
-//todo org
-'/
-
 }
 
 class Team {
     -name: string
     -captain: User
-    -members: User[]
+    -pictureUrl: string
 }
 
 class Task {
@@ -33,6 +26,7 @@ class Task {
     -description: string
     -weight: number
     -flag: string
+    -pictureUrl: string
 }
 
 class Solution {
@@ -43,6 +37,10 @@ class Hint {
     -content: string
 }
 
+class Sponsor {
+    -pictureUrl: string
+    -url: string
+}
 
 enum Role {
     ADMIN
@@ -54,6 +52,7 @@ enum Role {
 User -* Event
 User -* Team
 User -- Role
+Event -- Sponsor
 Task -down* Event
 Task -* Hint
 Task -* Solution
