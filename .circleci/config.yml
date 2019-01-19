@@ -35,7 +35,7 @@ jobs:
             - "2f:fc:61:7b:d4:b0:86:22:e4:71:8c:df:23:71:19:ce"
       - run:
           name: Keyscan deploy server
-          command: ssh-keyscan -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
+          command: ssh-keyscan -p 1234 -H $DEPLOY_SERVER >> ~/.ssh/known_hosts
 
       - run:
           name: Deploy
