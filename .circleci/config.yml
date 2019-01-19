@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Deploy
           command: |
-            ssh root@$DEPLOY_SERVER 'cd ~/task_platform && source ENV && cd Task_platform_frontend && git pull && docker-compose up -d --build'
+            ssh -p 1234 root@$DEPLOY_SERVER 'cd ~/task_platform && source ENV && cd Task_platform_frontend && git pull && docker-compose up -d --build'
 
 
 workflows:
