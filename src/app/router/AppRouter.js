@@ -4,6 +4,7 @@ import {Redirect, Route, Switch} from "react-router-dom"
 import {ConnectedRouter} from "connected-react-router";
 import AuthContainer from "../containers/AuthContainer";
 import EventsContainer from "../containers/EventsContainer";
+import PrivateRoute from "./PrivateRoute";
 
 const NoMatch = () => <h2>404 (Not found)</h2>
 
