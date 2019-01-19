@@ -1,0 +1,62 @@
+@startuml
+
+class User {
+    -name: string
+    -login: string
+    -password: string
+    -email: string
+}
+
+class Event {
+    -name: string
+    -pictureUrl: string
+    -description: string
+    -startDate: timestamp
+    -endDate: timestamp
+    -createdAt: timestamp
+
+
+/'
+//todo org
+'/
+
+}
+
+class Team {
+    -name: string
+    -captain: User
+    -members: User[]
+}
+
+class Task {
+    -name: string
+    -description: string
+    -weight: number
+    -flag: string
+}
+
+class Solution {
+    date: timestamp
+}
+
+class Hint {
+    -content: string
+}
+
+
+enum Role {
+    ADMIN
+    USER
+    ORGANIZER
+}
+
+
+User -* Event
+User -* Team
+User -- Role
+Task -down* Event
+Task -* Hint
+Task -* Solution
+
+
+@enduml
