@@ -1,0 +1,80 @@
+@import "mixins";
+
+.events-list-item {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow .15s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  &__head {
+    display: flex;
+    height: 78px;
+    border: 1px solid $border-color;
+    background-color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow .15s ease-in-out;
+
+    .active &:hover {
+      background-color: #ffffff;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fafafa;
+    }
+  }
+
+  &__icon {
+    background: url("../img/arrow-down.png") no-repeat center;
+    width: calc(6% - 10px);
+    height: 5px;
+  }
+
+  &__date, &__name, &__count, &__btn {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  &__date {
+    width: 13%;
+  }
+
+  &__name {
+    width: 52%;
+    font-size: 18px;
+  }
+
+  &__count {
+    width: 27%;
+    color: #666666;
+  }
+
+  &__btn {
+    width: 16%;
+    height: 100%;
+    justify-content: center;
+    background-color: #e7f5ff;
+    transition: background-color .15s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $hover-bg-color;
+    }
+  }
+
+  &__dropdown {
+    display: none;
+    background: #ffffff;
+    border: 1px solid $border-color;
+    margin-top: -1px;
+    padding: 45px 50px;
+
+    .active & {
+      display: block;
+    }
+  }
+}

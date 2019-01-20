@@ -1,0 +1,17 @@
+@import "mixins";
+
+.event-info {
+  padding: 45px 50px;
+
+  &__description {
+    font-size: 14px;
+  }
+
+  &__organizers {
+    margin-top: 50px;
+  }
+
+  &__sponsors-list {
+    margin-top: 35px;
+  }
+}
