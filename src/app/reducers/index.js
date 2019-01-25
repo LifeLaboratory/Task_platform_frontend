@@ -4,7 +4,7 @@ import * as Actions from '../actions'
 
 const createRootReducer = (history) => combineReducers({
   router: connectRouter(history),
-  auth,
+  //auth,
   events
 })
 
@@ -32,6 +32,7 @@ const events = (state = {pending: true, list: []}, action) => {
   }
 }
 
+/*
 const auth = (state = {pending: false}, action) => {
   switch (action.type) {
     case Actions.TRY_LOGIN:
@@ -49,6 +50,6 @@ const auth = (state = {pending: false}, action) => {
     default:
       return state
   }
-}
+}*/
 
 export default createRootReducer

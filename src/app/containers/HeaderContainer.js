@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
-import loginActionCreator from '../actions/creators/loginActionCreator'
 import {bindActionCreators} from "redux"
 import HeaderComponent from "../components/HeaderComponent";
 

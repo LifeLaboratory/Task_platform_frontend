@@ -1,5 +1,5 @@
 import fetch from "cross-fetch";
-
+/*
 export async function login(credentials) {
   const {login, password} = credentials
 
@@ -13,7 +13,7 @@ export async function login(credentials) {
   }).then(function (result) {
     return result.json()
   })
-}
+}*/
 
 export async function getEvents() {
   const mockEvents = [{
