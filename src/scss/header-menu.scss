@@ -1,0 +1,24 @@
+@import "mixins";
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+
+  &__item {
+    display: block;
+    height: 100%;
+    line-height: 70px;
+    padding: 0 20px;
+    color: $text-color;
+    text-decoration: none;
+    background-color: #ffffff;
+    transition: background-color .15s ease-out;
+
+    &:hover {
+      background-color: $hover-bg-color;
+    }
+  }
+}
+

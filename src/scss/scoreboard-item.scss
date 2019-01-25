@@ -1,0 +1,34 @@
+@import "mixins";
+
+.scoreboard-item {
+  display: flex;
+  border-bottom: 1px solid $border-color;
+  transition: background-color .1s ease-in-out;
+
+  &:hover {
+    background-color: $hover-bg-color;
+    cursor: pointer;
+  }
+
+  &__place, &__score, &__name {
+    display: flex;
+    align-items: center;
+    height: 60px;
+  }
+
+  &__place, &__score {
+    justify-content: center;
+  }
+
+  &__place {
+    width: 60px;
+  }
+
+  &__name {
+    flex-grow: 1;
+  }
+
+  &__score {
+    padding: 0 60px;
+  }
+}

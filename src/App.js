@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import "./App.css"
+import "./scss/main.scss"
 import Root from "./Root"
 import configureStore from "./app/store/configureStore"
 

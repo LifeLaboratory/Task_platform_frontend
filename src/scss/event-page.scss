@@ -1,0 +1,43 @@
+@import "mixins";
+
+.event-page {
+  padding-top: 63px;
+  padding-bottom: 50px;
+
+  &__title {
+
+  }
+
+  &__main-block {
+    margin-top: 95px;
+    border: 1px solid $border-color;
+    padding-bottom: 50px;
+  }
+
+  &__categories-list {
+    margin-top: 40px;
+    padding: 0 30px;
+  }
+
+  &__tasks-list {
+    margin-top: 50px;
+  }
+
+  &__tabs {
+
+  }
+
+  &__info {
+    padding: 45px 30px !important;
+  }
+
+  &__content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: #2f2f2f;
+  }
+}
