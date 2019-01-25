@@ -1,0 +1,64 @@
+@import "mixins";
+
+.events-list-menu {
+  padding: 20px;
+
+
+  &__content-container {
+    height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 1px solid $border-color;
+    display: flex;
+    align-items: center;
+
+    &:before {
+      content: '';
+      display: block;
+      width: calc(6% - 10px);
+    }
+  }
+
+  &__item {
+    padding: 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $hover-bg-color;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      background: url("../img/arrow-down.png");
+      height: 5px;
+      width: 6px;
+      margin-left: 15px;
+    }
+
+    &.ascending {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &--count {
+      width: 27%;
+    }
+
+    &--name {
+      width: 52%;
+    }
+
+    &--date {
+      width: 13%;
+    }
+
+    &--create-event {
+      width: 16%;
+    }
+  }
+}
