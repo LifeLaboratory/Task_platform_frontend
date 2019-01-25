@@ -17,6 +17,7 @@ export async function login(credentials) {
 
 export async function getEvents() {
   const mockEvents = [{
+    id: 1,
     date: "24.01.2019 - 24.01.2019",
     name: "Традиционная игра на открытом воздухе",
     players: "3/10",
