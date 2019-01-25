@@ -11,6 +11,7 @@ const NoMatch = () => <h2>404 (Not found)</h2>
 const AppRouter = ({history}) => (
   <ConnectedRouter history={history}>
     <div className={"app_container"}>
+      <HeaderContainer/>
       <Switch>
         <Route path="/events" exact component={EventListContainer}/>
         <Route path="/event/:id" exact component={EventContainer}/>
