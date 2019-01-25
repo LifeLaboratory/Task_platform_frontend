@@ -37,8 +37,10 @@ export default class EventListComponent extends Component {
 
           {
             eventList.map((event) =>
-              <div key={event.name} className="events-list-item active">
-                <div className="events-list-item__head">
+              <div key={event.name} className={event.opened ? "events-list-item active" : "events-list-item"}>
+                <div className="events-list-item__head" onClick={(e) => {
+                  actions.openEvent(event.id)
+                }}>
 
                   <div className="events-list-item__icon"></div>
 

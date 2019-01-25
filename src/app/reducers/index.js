@@ -8,8 +8,22 @@ const createRootReducer = (history) => combineReducers({
   events
 })
 
+const mapIncomingEvents = (events) => {
+  return events.map(event => ({...event, opened: false}))
+}
+
+const openEvent = (id, events) => {
+  return events.map(event => ({...event, opened: event.id === id ? !event.opened : false}))
+}
+
 const events = (state = {pending: true, list: []}, action) => {
   switch (action.type) {
+    case Actions.OPEN_EVENT:
+      const {events} = state
+      return {
+        ...state,
+        list: openEvent(action.id, state.list)
+      }
     case Actions.TRY_FETCH_EVENTS:
       return {
         ...state,
@@ -19,7 +33,7 @@ const events = (state = {pending: true, list: []}, action) => {
       return {
         ...state,
         pending: false,
-        list: action.events
+        list: mapIncomingEvents(action.events)
       }
     case Actions.FETCH_EVENTS_FAILED:
       return {

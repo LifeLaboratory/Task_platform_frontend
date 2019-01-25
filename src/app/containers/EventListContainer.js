@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import EventListComponent from '../components/EventListComponent'
 import fetchEventsCreator from '../actions/creators/fetchEventsCreator'
+import openEventCreator from '../actions/creators/openEventCreator'
 import {bindActionCreators} from "redux"
 
 class EventListContainer extends Component {
@@ -10,7 +11,10 @@ class EventListContainer extends Component {
 
     const {auth, dispatch} = props
     const fetchEvents = bindActionCreators(fetchEventsCreator, dispatch)
+    const openEvent = bindActionCreators(openEventCreator, dispatch)
     fetchEvents()
+
+    this.actions = {openEvent}
   }
 
   render() {
