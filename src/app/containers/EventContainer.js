@@ -1,7 +1,5 @@
 import React, {Component} from "react"
 import EventComponent from '../components/EventComponent'
-import getEventsLoginCreator from '../actions/creators/getEventsLoginCreator'
-import {bindActionCreators} from "redux"
 import { connect } from 'react-redux'
 
 class EventContainer extends Component {
@@ -12,7 +10,7 @@ class EventContainer extends Component {
   render() {
 
     return (
-      <EventComponent actions={this.actions}/>
+      <EventComponent/>
     )
   }
 }

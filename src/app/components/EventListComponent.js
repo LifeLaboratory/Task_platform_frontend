@@ -8,6 +8,8 @@ export default class EventListComponent extends Component {
   render(props) {
     const {events, actions, auth} = this.props
 
+    const eventList = events.list
+
     return (
 
       <div className="events-list-page">
@@ -34,8 +36,8 @@ export default class EventListComponent extends Component {
         <div className="events-list">
 
           {
-            events.map((event) =>
-              <div className="events-list-item active">
+            eventList.map((event) =>
+              <div key={event.name} className="events-list-item active">
                 <div className="events-list-item__head">
 
                   <div className="events-list-item__icon"></div>
